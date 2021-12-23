@@ -1,2 +1,2 @@
 # onlinecity_lukas
-Task made for onlinecity
+OnlineCity - Frontend Developer Test
