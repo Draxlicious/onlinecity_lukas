@@ -11,6 +11,12 @@
     <script src="assets/index.js" defer></script>
 </head>
 <body>
+    <div class="loader-overlay">
+        <div id="loader">
+            <img class="loader-image" src="assets/Login Screen Frontend assets/logo-white.svg">
+        </div>
+    </div>
+
     <div id="index" class="vh-100 d-flex flex-column justify-content-center align-items-center">
         <div class="container mw-100">
             <div class="row">
@@ -27,16 +33,19 @@
                             <p class="forgotPassword" style="opacity:0.5">Forgot Password?</p>
                         </div>
 
+                    
                         <span id="checkbox" class="position-relative">
                             <label for="trigger" class="checker">
                                 <input id="checkboxTrigger" type="password" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                                 <input id="trigger" class="d-none" type="checkbox" onclick="checkPasswordType()">
                                 <div class="test">
-                                    <i class="bi bi-eye"></i>
+                                    <div class="tooltip"><i class="bi bi-eye-slash"></i>
+                                        <span class="tooltiptext">Click to make your password visible.</span>
+                                    </div>
                                 </div>
                             </label>
-                            <!-- <i class="bi bi-eye-slash"></i> -->
-                          </span>
+                        </span>
+                        <!-- <i class="bi bi-eye"></i> -->
                         
                     </div>
                     <div class="mb-3">
@@ -46,10 +55,6 @@
             </div>
             <div class="flex2 d-none d-xl-block p-0">
                 <div class="d-flex">
-                    <!-- <figure class="mw-100">
-                        <img class="img-fluid float-end" src="assets/Login Screen Frontend assets/michael-maasen-ZY7fuakuXJ0-unsplash.jpg">
-                    </figure> -->
-                    <!-- <div class="image-slider"></div> -->
 
                       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -77,19 +82,36 @@
     function checkPasswordType() {
         let checkbox = document.getElementById("checkboxTrigger");
         let iLogo = document.querySelector("i");
+        let tooltipText = document.querySelector(".tooltiptext");
 
         if (checkbox.type === "password") {
             checkbox.type = "text";
-            iLogo.classList.add("bi-eye-slash")
-            iLogo.classList.remove("bi-eye")
-        } else {
-            checkbox.type = "password";
             iLogo.classList.add("bi-eye")
             iLogo.classList.remove("bi-eye-slash")
+            tooltiptext.innerHTML = "Click to make your password visible."
+            
+        } else {
+            checkbox.type = "password";
+            iLogo.classList.add("bi-eye-slash")
+            iLogo.classList.remove("bi-eye")
+            tooltiptext.innerHTML = "Click to make your password invisible."
         }
       }
+
+      document.addEventListener("DOMContentLoaded", function(){
+          function loadingtest(){
+              setTimeout(()=>{
+                  let loader = document.querySelector(".loader-overlay");
+                  loader.style.display = "none"
+                  console.log("hey")
+                },1500)
+            }
+            
+            loadingtest()
+      });
+
     </script>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
