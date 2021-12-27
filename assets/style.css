@@ -16,8 +16,35 @@ body{
     height:50px;
     width:100%;
 }
-.microphone{
-    height: 100%;
-    width: auto;
-    background-size: 100%;
+
+
+.form-control{
+    padding-right:10rem;
+}
+
+.btn{
+    min-width: 100%;
+}
+
+.forgotPassword{
+    cursor: pointer;
+}
+
+.flex2{
+    flex:2;
+}
+
+.flex2 img{
+    width:100%;
+    min-height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.test{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: black;
 }
