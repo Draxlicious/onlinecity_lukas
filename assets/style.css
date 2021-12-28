@@ -118,11 +118,11 @@ i{
 
   .loader-image{
       height:125px;
-      animation-name: loader;
+      animation-name: loader-image;
       animation-duration: 2s;
   }
 
-  @keyframes loader {
+  @keyframes loader-image {
     33%{
         height:100px;
         opacity:0.3;
@@ -130,6 +130,7 @@ i{
     100%{
         height:825px;
         opacity: 0;
+        filter: blur(8px);
     }
   } 
 

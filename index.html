@@ -80,22 +80,25 @@
     </div>
     <script>
     function checkPasswordType() {
-        let checkbox = document.getElementById("checkboxTrigger");
+        let checkboxButton = document.getElementById("checkboxTrigger");
         let iLogo = document.querySelector("i");
         let tooltipText = document.querySelector(".tooltiptext");
+        console.log(tooltipText)
+        
 
-        if (checkbox.type === "password") {
-            checkbox.type = "text";
+        if (checkboxButton.type === "password") {
+            checkboxButton.type = "text";
             iLogo.classList.add("bi-eye")
             iLogo.classList.remove("bi-eye-slash")
-            tooltiptext.innerHTML = "Click to make your password visible."
+             tooltipText.innerHTML = "Click again to hide your password."
             
         } else {
-            checkbox.type = "password";
+            checkboxButton.type = "password";
             iLogo.classList.add("bi-eye-slash")
             iLogo.classList.remove("bi-eye")
-            tooltiptext.innerHTML = "Click to make your password invisible."
+             tooltipText.innerHTML = "Click to make your password visible."
         }
+
       }
 
       document.addEventListener("DOMContentLoaded", function(){
@@ -109,6 +112,8 @@
             
             loadingtest()
       });
+
+      
 
     </script>
 
