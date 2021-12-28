@@ -3,23 +3,17 @@
 }
 
 body{
-    background-color:#051733;
-    color:white;
+    background-color: #051733;
+    color: white;
 }
-
-#index{
-    
-}
-
 
 .logo{
-    height:50px;
-    width:100%;
+    height: 50px;
+    width: 100%;
 }
 
-
 .form-control{
-    padding-right:10rem;
+    padding-right: 10rem;
 }
 
 .btn{
@@ -31,12 +25,12 @@ body{
 }
 
 .gallery-container{
-    flex:2;
+    flex: 2;
 }
 
 .gallery-container img{
-    /* width:100%; */
-    /* min-height:100vh; */
+    /* width: 100%; */
+    min-height: 100vh;
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
     /* background-position: center; */
@@ -58,9 +52,9 @@ i{
 .tooltip {
     position: relative;
     opacity: 1;
-  }
+}
   
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 200px;
     background-color: #fff;
@@ -73,18 +67,17 @@ i{
     bottom: 100%;
     left: 50%;
     margin: 0 0 20px -120px;
-    
     /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
     opacity: 0;
     transition: opacity 1s;
-  }
+}
   
-  .tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
+}
 
-  .tooltiptext::after{
+.tooltiptext::after{
     content: '';
     background-color: #fff;
     height: 10px;
@@ -92,13 +85,11 @@ i{
     position: absolute;
     bottom: -5px;
     left: 50%;
-    /* transform: translateX(-50%); */
     transform: rotate(45deg);
-  }
-
+}
 
 /* Loading... */
-.loader-overlay{
+.loader-overlay {
     position: absolute;
     background-color:#051733;
     z-index: 10000;
@@ -108,40 +99,40 @@ i{
     animation-duration: 2s;
 }
 
-  #loader {
+#loader {
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: 1;
     transform: translate(-50%, -50%);
-  }
+}
 
-  .loader-image{
-      height:125px;
-      animation-name: loader-image;
-      animation-duration: 2s;
-  }
+.loader-image {
+    height: 125px;
+    animation-name: loader-image;
+    animation-duration: 2s;
+}
 
-  @keyframes loader-image {
+@keyframes loader-image {
     33%{
-        height:100px;
-        opacity:0.3;
+        height: 100px;
+        opacity: 0.3;
     }
     100%{
-        height:825px;
+        height: 825px;
         opacity: 0;
         filter: blur(8px);
     }
-  } 
+} 
 
-  @keyframes loader-overlay {
+@keyframes loader-overlay {
     33%{
-        opacity:1;
+        opacity: 1;
     }
     100%{
         opacity: 0;
     }
-  } 
+} 
 
   @keyframes image-zoom {
       from{

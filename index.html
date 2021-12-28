@@ -16,7 +16,6 @@
             <img class="loader-image" src="assets/Login Screen Frontend assets/logo-white.svg">
         </div>
     </div>
-
     <div id="index" class="vh-100 d-flex flex-column justify-content-center align-items-center">
         <div class="container mw-100">
             <div class="row">
@@ -32,8 +31,6 @@
                             <label for="exampleFormControlInput1" class="form-label">Password</label>
                             <p class="forgotPassword" style="opacity:0.5">Forgot Password?</p>
                         </div>
-
-                    
                         <span id="checkbox" class="position-relative">
                             <label for="trigger" class="checker">
                                 <input id="checkboxTrigger" type="password" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -45,46 +42,38 @@
                                 </div>
                             </label>
                         </span>
-                        <!-- <i class="bi bi-eye"></i> -->
-                        
                     </div>
                     <div class="mb-3">
                         <button type="button" class="btn btn-primary">Sign in</button>
                     </div>
                 </div>
-            </div>
-            <div class="gallery-container d-none d-xl-block p-0">
-                <div class="d-flex">
-
-                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="assets/Login Screen Frontend assets/laura-nyhuis-0P_pT8ZQKd8-unsplash.jpg" class="d-block w-100 img-fluid" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="assets/Login Screen Frontend assets/krists-luhaers-DSB1MZWsGco-unsplash.jpg" class="d-block w-100 img-fluid" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="assets/Login Screen Frontend assets/fatih-kilic-m1dM7ZXvdMs-unsplash.jpg" class="d-block w-100 img-fluid" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="assets/Login Screen Frontend assets/michael-maasen-ZY7fuakuXJ0-unsplash.jpg" class="d-block w-100 img-fluid" alt="...">
-                          </div>
-                        </div>
-                      </div>
-
-
                 </div>
-            </div>
-    
+                <div class="gallery-container d-none d-xl-block p-0">
+                    <div class="d-flex">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/Login Screen Frontend assets/laura-nyhuis-0P_pT8ZQKd8-unsplash.jpg" class="d-block w-100 img-fluid" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/Login Screen Frontend assets/krists-luhaers-DSB1MZWsGco-unsplash.jpg" class="d-block w-100 img-fluid" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/Login Screen Frontend assets/fatih-kilic-m1dM7ZXvdMs-unsplash.jpg" class="d-block w-100 img-fluid" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/Login Screen Frontend assets/michael-maasen-ZY7fuakuXJ0-unsplash.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>   
     </div>
     <script>
     function checkPasswordType() {
         let checkboxButton = document.getElementById("checkboxTrigger");
         let iLogo = document.querySelector("i");
         let tooltipText = document.querySelector(".tooltiptext");
-        console.log(tooltipText)
-        
 
         if (checkboxButton.type === "password") {
             checkboxButton.type = "text";
@@ -98,7 +87,6 @@
             iLogo.classList.remove("bi-eye")
              tooltipText.innerHTML = "Click to make your password visible."
         }
-
       }
 
       document.addEventListener("DOMContentLoaded", function(){
@@ -112,9 +100,6 @@
             
             loadingtest()
       });
-
-      
-
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
